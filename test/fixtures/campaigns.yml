@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  story: MyText
+  target_amount: 1
+  amount_raised: 1
+  timeline: 2014-11-09
+
+two:
+  title: MyString
+  story: MyText
+  target_amount: 1
+  amount_raised: 1
+  timeline: 2014-11-09

@@ -1,0 +1,8 @@
+<h1>Listing campaigns</h1>
+<% @campaigns.each do |campaign| %>
+    <p>
+      <%= link_to campaign.title, campaign %><%= link_to "Edit", edit_campaign_path(campaign) %>
+    </p>
+<% end %>
+<p><%= link_to "Add Campaign", new_campaign_path %></p>
+

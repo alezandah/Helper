@@ -1,0 +1,31 @@
+<p>
+  <strong>Title:</strong>
+  <%= @campaign.title %>
+</p>
+
+<p>
+  <strong>Story:</strong>
+  <%= @campaign.story %>
+</p>
+
+<p>
+  <strong>Target amount:</strong>
+  <%= @campaign.target_amount %>
+</p>
+
+<p>
+  <strong>Amount raised:</strong>
+  <%= @campaign.amount_raised %>
+</p>
+
+<p>
+  <strong>Timeline:</strong>
+  <%= @campaign.timeline %>
+</p>
+
+<p><%=@campaign.created_at %></p>
+<p>
+<%= link_to 'Edit', edit_campaign_path(@campaign) %> |
+<%= link_to 'Back', campaign_index_path %>
+<%= link_to 'Delete', @campaign, :confirm => 'ARe you sure?', :method => :delete %>
+</p>

@@ -1,0 +1,13 @@
+<h1>New campaign</h1>
+
+<%= form_for @campaign, as: :post, url: campaign_index_path(@campaign), method: :post, html: { class: "edit_post", id: "edit_post_45" } do |z| %>
+    <p><%= z.label :title %>: <%= z.text_area :title %></p>
+    <p><%= z.label :story %>: <%= z.text_area :story %></p>
+    <p><%= z.label :target_amount %>: <%= z.number_field :target_amount %></p>
+    <p><%= z.label :amount_raised %>: <%= z.number_field :amount_raised %></p>
+    <p><%= z.label :timeline %>: <%= z.date_select :timeline %></p>
+    <p><%= z.submit 'Add Campaign' %></p>
+<% end %>
+
+
+<%= link_to 'Back', campaign_index_path %>
