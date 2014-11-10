@@ -1,6 +1,6 @@
 <h1>Editing campaign</h1>
 
-<%= form_for @campaign do |z| %>
+<%= form_for @campaign, as: :post, url: campaign_path(@campaign), method: :patch  do |z| %>
 
     <p><%= z.label :title %>: <%= z.text_area :title %></p>
     <p><%= z.label :story %>: <%= z.text_area :story %></p>
