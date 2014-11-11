@@ -4,32 +4,43 @@
 
     <h2>Basics</h2>
     <div class="field">
-    <%= z.label :title %><br>
-      <%= z.text_area :title %>
+    <%= z.label :Title %><br>
+      <%= z.text_field :title %>
      </div>
 
     <div class="field">
-    <%= z.label :story %><br>
+      <%= z.label :Country %><br>
+      <%= z.text_field :country %>
+    </div>
+
+    <div class="field">
+      <%= z.label :Region %><br>
+      <%= z.text_field :region %>
+    </div>
+
+    <div class="field">
+      <%= z.label :City %><br>
+      <%= z.text_field :city %>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label">Category</label>
+      <div class="controls">
+
+        <p><div id="gender" name="gender" class="btn-group" data-toggle="buttons-radio">
+        <button type="button" class="btn btn-info">Medical Expenses</button>
+        <button type="button" class="btn btn-info">Emergency Medical Expenses</button>
+      </div></p>
+      </div>
+    </div>
+    <div class="field">
+    <%= z.label :Share_your_Story %><br>
       <%= z.text_area :story %>
       </div>
 
-    <div class="field">
-    <%= z.label :target_amount %><br>
-      <%= z.number_field :target_amount %>
-      </div>
-
-      <div class="field">
-    <%= z.label :amount_raised %><br>
-        <%= z.number_field :amount_raised %>
-        </div>
-
-        <div class="field">
-    <%= z.label :timeline %><br>
-          <%= z.date_select :timeline %>
-          </div>
 
      <div class="actions">
-    <%= z.submit 'Add Campaign' %>
+    <%= z.submit 'Save & Submit' %>
             </div>
 <% end %>
 

@@ -11,13 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141111132338) do
+ActiveRecord::Schema.define(version: 20141111175026) do
 
   create_table "campaigns", force: true do |t|
     t.string   "title"
     t.integer  "target_amount"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "country"
+    t.string   "region"
+    t.string   "city"
+    t.string   "category"
+    t.string   "image"
+    t.string   "Description"
+    t.string   "story"
   end
 
   create_table "contributions", force: true do |t|
