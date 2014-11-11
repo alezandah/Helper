@@ -11,14 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141109135545) do
+ActiveRecord::Schema.define(version: 20141111132338) do
 
   create_table "campaigns", force: true do |t|
     t.string   "title"
-    t.text     "story"
     t.integer  "target_amount"
-    t.integer  "amount_raised"
-    t.date     "timeline"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
