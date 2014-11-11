@@ -2,10 +2,46 @@
 
 <%= form_for @campaign, as: :post, url: campaign_path(@campaign), method: :patch  do |z| %>
 
-    <p><%= z.label :title %>: <%= z.text_area :title %></p>
-    <p><%= z.label :story %>: <%= z.text_area :story %></p>
-    <p><%= z.label :target_amount %>: <%= z.number_field :target_amount %></p>
-    <p><%= z.label :amount_raised %>: <%= z.number_field :amount_raised %></p>
-    <p><%= z.label :timeline %>: <%= z.date_select :timeline %></p>
+    <div class="field">
+      <%= z.label :Title %><br>
+      <%= z.text_field :title %>
+    </div>
+
+    <div class="field">
+      <%= z.label :Country %><br>
+      <%= z.text_field :country %>
+    </div>
+
+    <div class="field">
+      <%= z.label :Region %><br>
+      <%= z.text_field :region %>
+    </div>
+
+    <div class="field">
+      <%= z.label :City %><br>
+      <%= z.text_field :city %>
+    </div>
+
+    <div class="field">
+      <%= z.label :Category %><br>
+      <%= z.text_field :category %>
+    </div>
+
+    <div class="field">
+      <%= z.label :Share_your_Story %><br>
+      <%= z.text_area :story %>
+    </div>
+
+
+    <div class="field">
+      <%= z.label :Fundraising_Goal %><br>
+      <%= z.text_field :target_amount %>
+    </div>
+
+    <p></p>
+
+    <p>
+      <%= z.file_field :image %>
+    </p>
     <p><%= z.submit 'Save Campaign Changes' %></p>
 <% end %>
