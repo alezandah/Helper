@@ -27,5 +27,5 @@
 <p>
 <%= link_to 'Edit', edit_campaign_path(@campaign) %> |
 <%= link_to 'Back', campaign_index_path %>
-<%= link_to 'Delete', @campaign, :confirm => 'ARe you sure?', :method => :delete %>
+<%= link_to 'Destroy', campaign_path(@campaign), :confirm => 'ARe you sure?', :method => :delete %>
 </p>

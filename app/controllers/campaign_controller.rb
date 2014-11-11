@@ -42,10 +42,10 @@ class CampaignController < ApplicationController
   end
 
   def destroy
-    @campaign= Campaign.find(params[:id])
+    @campaign = Campaign.find(params[:id])
     @campaign.destroy
 
-    redirect_to campaign_path, :notice => "Your campaign was deleted"
+    redirect_to campaign_index_path, :notice => "Your campaign was deleted"
   end
 
 end
