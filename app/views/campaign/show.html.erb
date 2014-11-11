@@ -33,6 +33,10 @@
   <%= @campaign.category %>
 </p>
 
+        <%= image_tag @campaign.image_url.to_s %>
+
+
+
 <p><%=@campaign.created_at %></p>
 <p>
 <%= link_to 'Edit', edit_campaign_path(@campaign) %> |

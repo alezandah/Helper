@@ -1,6 +1,6 @@
 <h1>Welcome, Create a New campaign</h1>
 
-<%= form_for @campaign, as: :post, url: campaign_index_path(@campaign), method: :post do |z| %>
+<%= form_for @campaign, as: :post, :html => {:multipart => true}, url: campaign_index_path(@campaign), method: :post do |z| %>
 
     <h2>Basics</h2>
     <div class="field">
@@ -39,9 +39,20 @@
       </div>
 
 
-     <div class="actions">
-    <%= z.submit 'Save & Submit' %>
-            </div>
+    <div class="field">
+      <%= z.label :Fundraising_Goal %><br>
+      <%= z.text_field :target_amount %>
+    </div>
+
+    <p></p>
+
+    <p>
+      <%= z.file_field :image %>
+    </p>
+
+<p></p>
+    <%= submit_tag "Save & Submit", :class => "btn btn-primary btn-lg btn-block" %>
+
 <% end %>
 
 
