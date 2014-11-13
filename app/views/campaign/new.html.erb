@@ -1,3 +1,5 @@
+<div class="container">
+  <div class="grey">
 <h1>Welcome, Create a New campaign</h1>
 
 <%= form_for @campaign, as: :post, :html => {:multipart => true}, url: campaign_index_path(@campaign), method: :post do |z| %>
@@ -23,6 +25,11 @@
       <%= z.text_field :city %>
     </div>
 
+   </div>
+</div>
+<p></p>
+        <div class="container">
+          <div class="grey">
     <h2>MEDICAL DETAILS</h2>
     <label class="control-label">Category</label>
     <div class="controls">
@@ -52,7 +59,8 @@
       <!--<%= z.label :remote_image_url, "or image URL" %>-->
       <!--<%= z.text_field :remote_image_url %>-->
     <!--</p>-->
-
+          </div>
+        </div>
 <p></p>
     <%= submit_tag "Save & Submit", :class => "btn btn-primary" %>
 
