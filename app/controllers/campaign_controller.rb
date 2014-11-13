@@ -21,7 +21,7 @@ class CampaignController < ApplicationController
     @campaign = Campaign.new(campaigns_params)
 
     if @campaign.save
-      redirect_to campaign_path(@campaign), :notice => "Your account was created!"
+      redirect_to campaign_path(@campaign), :notice => "Your campaign has been created!"
     else
       render "new"
     end
@@ -35,7 +35,7 @@ class CampaignController < ApplicationController
     @campaign= Campaign.find(params[:id])
 
     if @campaign.update_attributes(campaigns_params)
-      redirect_to campaign_path, :notice => "Your campaign has been created!"
+      redirect_to campaign_path, :notice => "Your campaign has been updated!"
     else
       render "edit"
     end
@@ -44,8 +44,7 @@ class CampaignController < ApplicationController
   def destroy
     @campaign = Campaign.find(params[:id])
     @campaign.destroy
-
-    redirect_to campaign_index_path, :notice => "Your campaign was deleted"
+    redirect_to campaign_index_path, :notice => "Your campaign has been deleted"
   end
 
 end
