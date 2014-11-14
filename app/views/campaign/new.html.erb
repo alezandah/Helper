@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="grey">
+  <div class="grey" >
 <h1>Welcome, Create a New campaign</h1>
 
 <%= form_for @campaign, as: :post, :html => {:multipart => true}, url: campaign_index_path(@campaign), method: :post do |z| %>
@@ -46,11 +46,11 @@
       <%= z.text_field :target_amount %>
     </div>
 
-    <p>
+            <div class="field">
       <%= z.label :Add_an_Image %> <%= z.file_field :image %>
-    </p>
+    </div>
 
-    <div class="field">
+    <div class="story">
     <%= z.label :Share_your_Story %><br>
       <%= z.text_area :story %>
       </div>
