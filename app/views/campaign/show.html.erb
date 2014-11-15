@@ -1,49 +1,61 @@
-<div class="showy">
-<p>
-  <strong>Title:</strong>
-  <%= @campaign.title %>
-</p>
+<div class="row">
+  <div class="col-md-1">
 
-<%= image_tag @campaign.image_url(:fully).to_s %>
+  </div>
+  <div class="track_holder col-md-10">
+    <div class="left_tracker col-md-7">
 
-<p>
-  <strong>Country:</strong>
-  <%= @campaign.story %>
-</p>
+      <p>
+        <strong>Title:</strong>
+        <%= @campaign.title %>
+      </p>
 
-<p>
-  <strong>Target amount:</strong>
-  <%= @campaign.target_amount %>
-</p>
+      <%= image_tag @campaign.image_url(:fully).to_s %>
 
-<p>
-  <strong>Region:</strong>
-  <%= @campaign.region %>
-</p>
+      <p>
+        <strong>Category:</strong>
+        <%= @campaign.category %>
+      </p>
 
-<p>
-  <strong>City:</strong>
-  <%= @campaign.city %>
-</p>
+      <p>
+        <strong>Share your Story:</strong><br>
+        <%= @campaign.story %>
+      </p>
 
-<p>
-  <strong>Share your Story:</strong>
-  <%= @campaign.story %>
-</p>
+      <p>
+        <%= link_to 'Edit', edit_campaign_path(@campaign), :class => "btn btn-primary" %> |
+        <%= link_to 'Back', campaign_index_path, :class => "btn btn-primary" %>|
+        <%= link_to 'Destroy', campaign_path(@campaign), :class => "btn btn-primary", :confirm => 'ARe you sure?', :method => :delete %>
+      </p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @campaign.category %>
-</p>
+    </div>
 
+    <div class="right_tracker col-md-4">
+      <p>
+        <strong>Country:</strong>
+        <%= @campaign.country %>
+      </p>
 
+      <p>
+        <strong>Target amount:</strong>
+        <%= @campaign.target_amount %>
+      </p>
 
+      <p>
+        <strong>Region:</strong>
+        <%= @campaign.region %>
+      </p>
 
+      <p>
+        <strong>City:</strong>
+        <%= @campaign.city %>
+      </p>
 
-<p><%=@campaign.created_at %></p>
-<p>
-<%= link_to 'Edit', edit_campaign_path(@campaign) %> |
-<%= link_to 'Back', campaign_index_path %>
-<%= link_to 'Destroy', campaign_path(@campaign), :confirm => 'ARe you sure?', :method => :delete %>
-</p>
+    </div>
+
+  </div>
+  <div class="col-md-1">
+
+  </div>
+
 </div>
