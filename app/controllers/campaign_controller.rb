@@ -14,7 +14,7 @@ class CampaignController < ApplicationController
 
 
   def campaigns_params
-    params.require(:post).permit(:title, :target_amount, :country, :region, :city, :categoty, :image, :description, :story)
+    params.require(:post).permit(:title, :target_amount, :country, :region, :city, :category, :image, :description, :story)
   end
 
   def create

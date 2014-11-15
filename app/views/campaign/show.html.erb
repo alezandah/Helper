@@ -1,7 +1,10 @@
+<div class="showy">
 <p>
   <strong>Title:</strong>
   <%= @campaign.title %>
 </p>
+
+<%= image_tag @campaign.image_url(:fully).to_s %>
 
 <p>
   <strong>Country:</strong>
@@ -33,7 +36,7 @@
   <%= @campaign.category %>
 </p>
 
-        <%= image_tag @campaign.image_url(:thumb).to_s %>
+
 
 
 
@@ -43,3 +46,4 @@
 <%= link_to 'Back', campaign_index_path %>
 <%= link_to 'Destroy', campaign_path(@campaign), :confirm => 'ARe you sure?', :method => :delete %>
 </p>
+</div>
