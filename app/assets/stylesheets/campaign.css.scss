@@ -85,7 +85,7 @@ div.desc {
 
   height:auto;
   overflow: hidden;
-//  border:1px solid red;
+  background:#eeeeee;
   margin-left: 7%;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -96,7 +96,7 @@ div.desc {
 
   height:auto;
   overflow: hidden;
-  background:#eeeeee;
+  background:#ffffff;
   padding:20px;
   box-shadow:0px 0px 2px 0px #808080;
   border-radius:7px;
@@ -113,8 +113,21 @@ div.desc {
   border-radius:7px;
 }
 
-.container {
-  position: relative;
-  z-index: 2;
+.right_tracker .donate{
+  width:auto;
+  height:auto;
+  overflow: hidden;
+  background:#000;
+  font-family: 'Myriad Pro Regular';
+  color:#fff;
+  font-size:40px;
+  line-height:40px;
+  text-align: center;
+  padding:15px 0;
+  border-radius:5px;
 }
 
+h4 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #2c3e50;
+}

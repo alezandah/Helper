@@ -1,3 +1,5 @@
+<div class="container">
+  <div class="grey" >
 <h1>Editing campaign</h1>
 
 <%= form_for @campaign, as: :post, url: campaign_path(@campaign), method: :patch  do |z| %>
@@ -43,5 +45,8 @@
     <p>
       <%= z.file_field :image %>
     </p>
-    <p><%= z.submit 'Save Campaign Changes' %></p>
+        </div>
+        </div>
+        <p></p>
+    <p><%= z.submit 'Save Campaign Changes', :class => "btn btn-primary" %></p>
 <% end %>
