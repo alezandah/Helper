@@ -1,5 +1,5 @@
 Source 'https://rubygems.org'
-
+gem 'devise'
 gem "carrierwave"
 gem "therubyracer" 
 gem "less-rails"

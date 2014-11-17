@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :fundraiser
-  resources :funder
+  devise_for :users
+  root 'campaign#index'
   resources :campaign
+  resources :user
   resources :contribution
 
   # The priority is based upon order of creation: first created -> highest priority.
