@@ -13,9 +13,12 @@
       </div>
 
       <% if devise_mapping.rememberable? -%>
-          <div>
+          <div class="boy">
+
             <%= f.check_box :remember_me %>
+            <div class="girl">
             <%= f.label :remember_me  %>
+            </div>
           </div>
       <% end -%>
 
