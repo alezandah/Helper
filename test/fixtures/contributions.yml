@@ -1,11 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  amount: 1
-  date: 2014-11-09
-  comment: MyString
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  comment: MyText
+  donation_amount: 1
+  campaign_id: 1
 
 two:
-  amount: 1
-  date: 2014-11-09
-  comment: MyString
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  comment: MyText
+  donation_amount: 1
+  campaign_id: 1

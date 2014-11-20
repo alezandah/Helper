@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @contribution.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @contribution.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @contribution.email %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @contribution.comment %>
+</p>
+
+<p>
+  <strong>Donation amount:</strong>
+  <%= @contribution.donation_amount %>
+</p>
+
+<p>
+  <strong>Campaign:</strong>
+  <%= @contribution.campaign_id %>
+</p>
+
+<%= link_to 'Edit', edit_contribution_path(@contribution) %> |
+<%= link_to 'Back', contributions_path %>

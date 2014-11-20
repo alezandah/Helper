@@ -1,0 +1,34 @@
+
+<h1>Listing Contributions</h1>
+
+<table class="rwd-table">
+  <tr>
+    <th>First name</th>
+    <th>Lastname</th>
+    <th>Email</th>
+    <th>Comment</th>
+    <th>Donation amount</th>
+    <th>Campaign</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @contributions.each do |contribution| %>
+      <tr>
+        <td><%= contribution.first_name %></td>
+        <td><%= contribution.last_name %></td>
+        <td><%= contribution.email %></td>
+        <td><%= contribution.comment %></td>
+        <td><%= contribution.donation_amount %></td>
+        <td><%= contribution.campaign_id %></td>
+        <td><%= link_to 'Show', contribution %></td>
+        <td><%= link_to 'Edit', edit_contribution_path(contribution) %></td>
+        <td><%= link_to 'Destroy', contribution, :id => contribution.id, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contribution', new_contribution_path, class:"btn btn-primary" %>
