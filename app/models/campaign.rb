@@ -8,4 +8,6 @@ class Campaign < ActiveRecord::Base
   validates :category, presence: true
   validates :image, presence: true
   validates :story, presence: true
+
+  has_many :contributions
 end

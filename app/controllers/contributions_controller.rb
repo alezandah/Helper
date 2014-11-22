@@ -20,7 +20,7 @@ class ContributionsController < ApplicationController
   end
 
   def contribution_params
-    params.require(:contribution).permit(:first_name, :lastname, :email, :comment, :donation_amount, :campaign_id)
+    params.require(:contribution).permit(:first_name, :last_name, :email, :comment, :donation_amount, :campaign_id)
   end
 
   def create
@@ -34,7 +34,13 @@ class ContributionsController < ApplicationController
   end
 
   def update
-    @contribution.update(contribution_params)
+    @contribution= Contribution.find(params[:id])
+
+    if @contribution.update_attributes(contribution_params)
+      redirect_to contribution_path, :notice => "Your campaign has been updated!"
+    else
+      render "edit"
+    end
 
   end
 

@@ -33,6 +33,16 @@
         <%= link_to 'Destroy', campaign_path(@campaign), :class => "btn btn-primary", :confirm => 'ARe you sure?', :method => :delete %>
       </p>
 
+      <h2>
+        Contributions <%= link_to "Contributions", contributions_path %>
+      </h2>
+      <% @campaign.contributions.each do |contribution| %>
+          Ghc <%= contribution.donation_amount %><br>
+          <%= contribution.first_name %> <%= contribution.last_name %><br>
+          <%= contribution.comment %><br>
+          <p></p>
+      <% end %>
+
     </div>
 
     <div class="right_tracker col-md-4">
@@ -61,7 +71,7 @@
         <%= @campaign.city %>
       </p>
 
-      <div class="donate">Donate</div>
+      <div class="donate"><%= link_to "Donate", new_campaign_contribution_path(@campaign) %></div>
       <br>
       <br>
       <h4>Please Share</h4>
@@ -69,8 +79,9 @@
         It takes only a few seconds to share this story with the world, please share.
       </h6>
       <br>
-      <p>Add FB Share button here</p>
-      <h4>
+      <a href="#" class="btn btn-primary btn-large" onclick="window.open('http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&t=<?php the_title(); ?>',
+              'Share on Facebook', 'width=600, height=350'); return false;"><i class="icon-white icon-facebook"></i>
+        Share on Facebook</a>      <h4>
         Recent Donations
       </h4>
     </div>
