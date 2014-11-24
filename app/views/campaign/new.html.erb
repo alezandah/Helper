@@ -1,10 +1,10 @@
 <div class="container">
   <div class="grey" >
-<h1>Welcome, Create a New campaign</h1>
+<h2>Welcome, Create a New Campaign</h2>
 
 <%= form_for @campaign, as: :post, :html => {:multipart => true}, url: campaign_index_path(@campaign), method: :post do |z| %>
 
-    <h2>BASIC DETAIL</h2>
+    <h2>Basic Details</h2>
     <div class="field">
     <%= z.label :Title %><br>
       <%= z.text_field :title %>
@@ -30,7 +30,8 @@
 <p></p>
         <div class="container">
           <div class="grey">
-    <h2>MEDICAL DETAILS</h2>
+    <h2>Medical Details</h2>
+            <div style="width: 300px">
     <label class="control-label">Category</label>
     <div class="controls">
       <p>
@@ -39,6 +40,7 @@
           <option value="Emergency Medical Expenses">Emergency Medical Expenses</option>
         </select>
       </p>
+      </div>
     </div>
 
     <div class="field">
