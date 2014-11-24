@@ -11,7 +11,8 @@ class ContributionsController < ApplicationController
   end
 
   def new
-    @contribution = Contribution.new
+    @campaign = Campaign.find(params[:campaign_id])
+    @contribution = @campaign.contributions.build
 
   end
 
@@ -20,14 +21,15 @@ class ContributionsController < ApplicationController
   end
 
   def contribution_params
-    params.require(:contribution).permit(:first_name, :last_name, :email, :comment, :donation_amount, :campaign_id)
+    params.require(:contribution).permit(:first_name, :lastname, :email, :comment, :donation_amount, :campaign_id)
   end
 
   def create
     @contribution = Contribution.new(contribution_params)
 
     if @contribution.save
-      redirect_to contributions_path(@contribution), :notice => "Your contribution has been created!"
+
+      redirect_to campaign_path(contribution_params[:campaign_id]), :notice => "Your contribution has been created!"
     else
       render "new"
     end
@@ -37,11 +39,10 @@ class ContributionsController < ApplicationController
     @contribution= Contribution.find(params[:id])
 
     if @contribution.update_attributes(contribution_params)
-      redirect_to contribution_path, :notice => "Your campaign has been updated!"
+      redirect_to campaign_path(params[:campaign_id]), :notice => "Your campaign has been updated!"
     else
       render "edit"
     end
-
   end
 
   def destroy

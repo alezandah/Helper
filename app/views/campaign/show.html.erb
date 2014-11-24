@@ -36,12 +36,6 @@
       <h2>
         Contributions <%= link_to "Contributions", contributions_path %>
       </h2>
-      <% @campaign.contributions.each do |contribution| %>
-          Ghc <%= contribution.donation_amount %><br>
-          <%= contribution.first_name %> <%= contribution.last_name %><br>
-          <%= contribution.comment %><br>
-          <p></p>
-      <% end %>
 
     </div>
 
@@ -82,8 +76,16 @@
       <a href="#" class="btn btn-primary btn-large" onclick="window.open('http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&t=<?php the_title(); ?>',
               'Share on Facebook', 'width=600, height=350'); return false;"><i class="icon-white icon-facebook"></i>
         Share on Facebook</a>      <h4>
+      </h4>
+      <h4>
         Recent Donations
       </h4>
+      <% @campaign.contributions.each do |contribution| %>
+          Ghc <%= contribution.donation_amount %><br>
+          <%= contribution.first_name %> <%= contribution.last_name %><br>
+          <%= contribution.comment %><br>
+          <p></p>
+      <% end %>
     </div>
 
   </div>
