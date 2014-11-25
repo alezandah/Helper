@@ -46,11 +46,11 @@
         <li><%= link_to "Add Campaign", new_campaign_path %></li>
         <li><%= link_to "Help Someone", campaign_index_path  %></li>
         <li><%= link_to "Our Story", "/path3"  %></li>
-        <li><%= link_to "FAQ", "/path3"  %></li>
-        <!--<li class="nav navbar-nav right">Logged in as: <strong><%= current_user.email %></strong></li>.-->
+        <li style="text-indent: 430px"><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right" style="padding-top: 12px;">
-        <li>Logged in as: <strong><%= current_user.email %></strong></li>.
+      <ul class="nav navbar-nav navbar-right" style="padding-top: 14px;">
+        <li>Logged in as: <strong><%= current_user.email %></strong></li>
+
       </ul>
     </div>
   </div>

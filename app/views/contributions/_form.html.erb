@@ -33,8 +33,8 @@
         <%= f.number_field :donation_amount,  autofocus: true, class: "form-control", placeholder:"Ghc"  %>
       </div>
       <div class="form-group">
-        <%= f.label :campaign_id %><br>
-        <%= f.number_field :campaign_id,  autofocus: true, class: "form-control", placeholder:"Campaign_id"  %>
+        <!--<%= f.label :campaign_id %>--><br>
+        <%= f.hidden_field :campaign_id,  autofocus: true, class: "form-control", placeholder:"Campaign_id"  %>
       </div>
       <div class="form-group">
         <%= f.submit "Donate", class:"btn btn-lg btn-primary btn-block" %>
