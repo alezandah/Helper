@@ -1,4 +1,5 @@
 class CampaignController < ApplicationController
+
   layout 'campaign'
 
   def index

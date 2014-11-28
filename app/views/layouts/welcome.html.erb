@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html id="pics">
+<head>
+  <%= stylesheet_link_tag "application.css" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body id="banku">
+
+<header id="header">
+<div id="navbar-collapse" class="navbar-collapse collapse">
+  <ul class="nav navbar-nav">
+    <li class="active nav-item"><a class="btn btn-cta btn-cta-secondary">Home</a></li>
+    <li class="nav-item"><a class="btn btn-cta btn-cta-secondary">Features</a></li>
+    <li class="nav-item"><a class="btn btn-cta btn-cta-secondary">Pricing</a></li>
+    <li class="nav-item"><%= link_to "Login", new_user_session_path %></li>
+    <li class="nav-item"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+    <li class="nav-item nav-item-cta last"><a class="btn btn-cta btn-cta-secondary">Sign Up Free</a></li>
+  </ul><!--//nav-->
+</div><!--//navabr-collapse-->
+</header>
+
+<%= yield %>
+
+</body>
+
+</html>

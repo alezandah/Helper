@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
 
-
   resources :contributions
 
   devise_for :users
-  root 'campaign#index'
+  root 'welcome#index'
   resources :user
 
   resources :campaign do
