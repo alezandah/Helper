@@ -13,7 +13,7 @@
   <%= image_tag("logo.png", :size => "260x100") %>
   <ul class="nav navbar-nav navbar-right">
     <li class="nav-item"><%= link_to "Login", new_user_session_path %></li>
-    <li class="nav-item nav-item-cta last"><a class="btn btn-cta btn-primary">Donate to Someone Now!</a></li>
+    <li class="nav-item nav-item-cta last"><%= link_to 'Donate to Someone Now!', campaign_index_path, :class => "btn btn-primary" %></a></li>
   </ul><!--//nav-->
 </div><!--//navabr-collapse-->
 </header>
