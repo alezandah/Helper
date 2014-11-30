@@ -32,17 +32,22 @@
         <%= link_to 'Back', campaign_index_path, :class => "btn btn-primary" %>|
         <%= link_to 'Destroy', campaign_path(@campaign), :class => "btn btn-primary", :confirm => 'ARe you sure?', :method => :delete %>
       </p>
+      <!--<%= link_to "Contributions", contributions_path %>-->
 
+      <div class="jumia">
       <h2>
-        Contributions <%= link_to "Contributions", contributions_path %>
+        Supportive Comments
       </h2>
 
       <% @campaign.comments.each do |comment| %>
-           <%= comment.name %><br>
+           Name:
+          <%= comment.name %><br>
+          Comment:
           <%= comment.text %><br>
           <p></p>
       <% end %>
-
+      </div>
+<p></p>
       <div style="float: left">
       <%= render 'comments/form' %>
       </div>
