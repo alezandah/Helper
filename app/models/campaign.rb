@@ -10,4 +10,5 @@ class Campaign < ActiveRecord::Base
   validates :story, presence: true
 
   has_many :contributions
+  has_many :comments
 end

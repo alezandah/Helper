@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :comments
+
   resources :contributions
 
   devise_for :users
@@ -8,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :campaign do
     resources :contributions
+    resources :comments
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

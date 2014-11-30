@@ -37,6 +37,16 @@
         Contributions <%= link_to "Contributions", contributions_path %>
       </h2>
 
+      <% @campaign.comments.each do |comment| %>
+           <%= comment.name %><br>
+          <%= comment.text %><br>
+          <p></p>
+      <% end %>
+
+      <div style="float: left">
+      <%= render 'comments/form' %>
+      </div>
+
     </div>
 
     <div class="right_tracker col-md-4">
