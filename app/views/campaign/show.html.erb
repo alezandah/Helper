@@ -10,9 +10,9 @@
   <div class="track_holder col-md-10">
     <div class="left_tracker col-md-7">
 
-      <p>
-        <strong>Title:</strong>
-        <%= @campaign.title %>
+     <p><h2 style="color: black">
+        <strong>Illness:</strong>
+       <%= @campaign.title %></h2>
       </p>
 
       <%= image_tag @campaign.image_url(:fully).to_s %>
@@ -57,7 +57,7 @@
 
     <div class="right_tracker col-md-4">
       <p>
-        <strong>From the Helper Team</strong><br>
+        <strong><h3>From the Helper Team</h3></strong><br>
         Help Mr Joe raise funds for His Brain cancer Treatment. He is loving family dad with 3 kids who
         would love to spend more time with their father.
       </p>
@@ -97,7 +97,7 @@
         Recent Donations
       </h4>
       <% @campaign.contributions.each do |contribution| %>
-          Ghc <%= contribution.donation_amount %><br>
+         Ghc <%= contribution.donation_amount %><br>
           <%= contribution.first_name %> <%= contribution.last_name %><br>
           <%= contribution.comment %><br>
           <p></p>
